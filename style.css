@@ -1,5 +1,16 @@
+table{
+    border: 10px solid #021;
+}
+
+
+
+
 td{
     border: 2px solid #245;
+    border-radius: 15px;
     width: 40px;
     height: 40px;
+    text-align: center;
+    background: #f23;
+    color: #4ff;
 }
