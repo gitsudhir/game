@@ -1,16 +1,37 @@
-table{
-    border: 10px solid #021;
+
+.flex-main{
+    display: flex;
+    background: blue;
+    width: 520px;
+    border:2px;
 }
-
-
-
-
-td{
-    border: 2px solid #245;
-    border-radius: 15px;
+.flex-main > div{
     width: 40px;
     height: 40px;
+    color: white;
+    border: 1px solid #43d;
+    margin: 5px;
+    background: #022;
+    border-radius: 15px;
     text-align: center;
-    background: #f23;
-    color: #4ff;
+    font-size:30px; 
+}
+
+table{
+width: 520px;
+background: #009;
+}
+td{
+font-size: 26px;
+border: 2px solid #fff;
+border-radius: 20px;
+color: #8ff;
+text-align: center;
+background: black;
+}
+
+#start{
+    background: #ffa;
+    color: #000;
+
 }
