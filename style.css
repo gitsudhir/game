@@ -8,10 +8,10 @@
 .flex-main > div{
     width: 40px;
     height: 40px;
-    color: white;
+    color: #000000;
     border: 1px solid #43d;
     margin: 5px;
-    background: #022;
+    background: #4a2;
     border-radius: 15px;
     text-align: center;
     font-size:30px; 
@@ -33,5 +33,20 @@ background: black;
 #start{
     background: #ffa;
     color: #000;
-
+    border: 6px #fff inset;
+}
+#start:hover{
+    background: #aaa;
+    color: red;
+    border: 6px #fff outset;
+    box-shadow:red 2px 3px; 
+}
+.flex-main > .change{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #43d;
+    margin: 5px;
+    background: #000;
+    border-radius: 15px;
+    color: blue; 
 }
