@@ -3,7 +3,7 @@ function start(ths){ //////---mainfunction------////////
 var tt=0;    
 if(ths.innerHTML==="Start"){
     deleteAll()
-   // random()
+    random()  ////////coment 
     start1()
     ths.innerHTML="Restart";
     
@@ -22,29 +22,50 @@ if(ths.innerHTML==="Start"){
    var A=document.getElementsByClassName('flex-main')
    for(var a of A){
      for(var aa of a.children){
-        
-        aa.addEventListener('click',(aaa)=>{
-           // console.log(aaa.target.innerHTML) ;
+         console.log('hiiii')
+        aa.addEventListener('mousedown',(aaa)=>{
+          // console.log(aaa.target)
+            console.log(aaa.button)
+          ///////////////////////////////////////////////////////////running 
+          
+          ///////////////////////////////////////////////
+          if(aaa.button==2){
+            console.log(parseInt( aaa.target.innerHTML))   
+            console.log('pevent default')
+              aaa.preventDefault()
+            if(aaa.target.hasAttribute('class')){aaa.target.removeAttribute('class')}
+             aaa.target.className='flag'
+          }
+
+
+            if(aaa.button==0){
+             // console.log(aaa.target.innerHTML) 
            if( parseInt(aaa.target.innerHTML) >0 ){
-               console.log('you clicked on wrong box')
-           }else{
-           
-           if( parseInt(Math.random()*10)>=8){ ///////////////------red block-----////////
-               console.log('you Lost')
-             if(aaa.target.hasAttribute('class')){aaa.target.removeAttribute('class')}
-             aaa.target.className='red'
-               document.getElementById('left').innerHTML= parseInt(document.getElementById('left').innerHTML) -1
-               if(parseInt(document.getElementById('left').innerHTML)==0){
-                   alert('your score is '+document.getElementById('time').innerHTML )
-                   document.getElementById('left').innerHTML ="<strong>Score : "+ document.getElementById('time').innerHTML +"</strong>"
-               }
-            }else{
-                random()
-            }
+            console.log('you clicked on wrong box')
+        }else{
         
-        }
-         },false)
-         
+        if( parseInt(Math.random()*10)>=8){ ///////////////------red block-----////////
+            console.log('you Lost')
+          if(aaa.target.hasAttribute('class')){aaa.target.removeAttribute('class')}
+          aaa.target.className='red'
+            document.getElementById('left').innerHTML= parseInt(document.getElementById('left').innerHTML) -1
+            if(parseInt(document.getElementById('left').innerHTML)==0){
+                alert('your score is '+document.getElementById('time').innerHTML )
+                document.getElementById('left').innerHTML ="<strong>Score : "+ document.getElementById('time').innerHTML +"</strong>"
+            }
+         }else{
+             console.log('before random')
+             console.log(aaa.target.innerHTML+" none")
+           //  random()
+           if(aaa.target.hasAttribute('class')){aaa.target.removeAttribute('class')}
+             aaa.target.innerHTML=""+(1+parseInt(Math.random()*10))
+         }
+     
+     }
+                
+            }
+        },false)
+     
      }   
    }
     }
