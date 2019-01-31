@@ -13,6 +13,7 @@ if(ths.innerHTML==="Start"){
 
  
 }else{
+    window.location.reload();
     console.log('from else')
 }
 }
@@ -28,11 +29,14 @@ if(ths.innerHTML==="Start"){
                console.log('you clicked on wrong box')
            }else{
            
-           if( parseInt(Math.random()*10)>=8){
+           if( parseInt(Math.random()*10)>=8){ ///////////////------red block-----////////
                console.log('you Lost')
+             if(aaa.target.hasAttribute('class')){aaa.target.removeAttribute('class')}
+             aaa.target.className='red'
                document.getElementById('left').innerHTML= parseInt(document.getElementById('left').innerHTML) -1
                if(parseInt(document.getElementById('left').innerHTML)==0){
                    alert('your score is '+document.getElementById('time').innerHTML )
+                   document.getElementById('left').innerHTML ="<strong>Score : "+ document.getElementById('time').innerHTML +"</strong>"
                }
             }else{
                 random()
@@ -71,3 +75,5 @@ if(ths.innerHTML==="Start"){
         }
        
          }
+
+        

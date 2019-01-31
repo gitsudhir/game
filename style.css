@@ -50,3 +50,13 @@ background: black;
     border-radius: 15px;
     color: blue; 
 }
+
+.flex-main > .red{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #43d;
+    margin: 5px;
+    background:red;
+    border-radius: 25px;
+    color: blue; 
+}
